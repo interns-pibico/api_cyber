@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API Cyber - Sistema de Monitoreo de Agentes">
+    <title>{% block title %}API Cyber{% endblock %}</title>
+
+    <!-- Bootstrap CSS (Local) -->
+    <link rel="stylesheet" href="{{ root_path }}/static/vendor/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome (Local) -->
+    <link rel="stylesheet" href="{{ root_path }}/static/vendor/fontawesome/css/all.min.css">
+
+    <!-- Google Fonts: Figtree + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Anti-flash: apply saved theme before CSS loads -->
+    <script>
+        (function(){var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ root_path }}/static/css/style.css?v=52">
+
+    {% block extra_css %}{% endblock %}
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    <!-- Bootstrap JS Bundle (Local) -->
+    <script src="{{ root_path }}/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- App JS -->
+    <script src="{{ root_path }}/static/js/app.js"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

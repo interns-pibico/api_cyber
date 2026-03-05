@@ -1,0 +1,11 @@
+[Unit]
+Description=PibiCyber Daily Security Report Email
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=erpnext
+ExecStart=/home/erpnext/.services/api_cyber/scripts/send_daily_report.sh
+TimeoutStartSec=120
+Environment=PYTHONPATH=/home/erpnext/.services/api_cyber
